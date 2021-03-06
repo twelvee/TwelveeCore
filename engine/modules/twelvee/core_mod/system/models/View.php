@@ -41,7 +41,7 @@ class View
 
     public function getViewContent(string $viewPath, array $parameters = [])
     {
-        if(file_exists($viewPath)) {
+        if (file_exists($viewPath)) {
             $content = file_get_contents($viewPath);
             foreach ($parameters as $key => $parameter) {
                 $content = str_replace('{' . $key . '}', $parameter, $content);
@@ -51,8 +51,9 @@ class View
         return 'File not found';
     }
 
-    public function getViewContentArray(string $viewPath, array $items) {
-        if(file_exists($viewPath)) {
+    public function getViewContentArray(string $viewPath, array $items)
+    {
+        if (file_exists($viewPath)) {
             $globalContent = '';
             foreach ($items as $key => $parameter) {
                 $content = file_get_contents($viewPath);

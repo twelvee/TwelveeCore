@@ -18,7 +18,7 @@ class Router
 
     public function loadRoutes()
     {
-        require_once(ENGINE_DIR.'/modules/twelvee/core_mod/system/routes/routes.php');
+        require_once(ENGINE_DIR . '/modules/twelvee/core_mod/system/routes/routes.php');
         $this->setRoutes(routes());
     }
 }
