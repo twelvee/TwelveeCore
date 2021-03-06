@@ -11,9 +11,9 @@
 /templates/*
 /uploads/*
 !twelvee_core.xml
-.htaccess
-admin.php
-cron.php
-index.php
-robots.txt
+/.htaccess
+/admin.php
+/cron.php
+/index.php
+/robots.txt
 .idea
