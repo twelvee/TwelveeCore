@@ -1,7 +1,7 @@
 <?php
 
 use Core\admin\controllers\CoreModController;
-use Core\admin\models\Route;
+use Core\system\models\Route;
 
 function routes(): array
 {

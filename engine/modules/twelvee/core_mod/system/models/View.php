@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\admin\models;
+namespace Core\system\models;
 
 class View
 {
