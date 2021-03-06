@@ -7,5 +7,6 @@ function routes(): array
 {
     return [
         new Route('/admin.php?mod=twelvee_core', 'GET', CoreModController::class, 'index'),
+        new Route('/admin.php?mod=twelvee_core&{category}', 'GET', CoreModController::class, 'indexWithCategory'),
     ];
 }

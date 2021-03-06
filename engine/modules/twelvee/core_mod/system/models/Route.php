@@ -10,7 +10,7 @@ class Route
     public string $methodName;
     public array $parameters;
 
-    public function __construct(string $route, string $method, string $className, string $methodName, array $parameters=[])
+    public function __construct(string $route, string $method, string $className, string $methodName, array $parameters = [])
     {
         $this->route = $route;
         $this->method = $method;

@@ -2,21 +2,31 @@
 
 namespace Core\admin\controllers;
 
+use Core\admin\repositories\StoreItemRepository;
+use Core\system\models\Container;
 use Core\system\models\Request;
 use Core\system\models\View;
 
 class CoreModController extends Controller
 {
-    public function index(Request $request, View $view)
+    public function index(Request $request, View $view, Container $container)
     {
-        $items = [
-            [
-                'name' => 'asdasd',
-            ],
-            [
-                'name' => 'dfgdfg',
-            ]
-        ];
+        /** @var StoreItemRepository $repository */
+        $repository = $container->get(StoreItemRepository::class);
+        $items = $repository->getAll();
+        $this->renderIndexPage($view, $items);
+    }
+
+    public function indexWithCategory(Request $request, View $view, Container $container)
+    {
+        /** @var StoreItemRepository $repository */
+        $repository = $container->get(StoreItemRepository::class);
+        $items = $repository->getByCategory($request->get('category'));
+        $this->renderIndexPage($view, $items);
+    }
+
+    private function renderIndexPage(View $view, array $items)
+    {
         $view->render(
             ENGINE_DIR . '/modules/twelvee/core_mod/admin/views/main.php',
             [
