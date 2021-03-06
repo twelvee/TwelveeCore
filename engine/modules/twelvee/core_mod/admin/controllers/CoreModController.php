@@ -2,8 +2,8 @@
 
 namespace Core\admin\controllers;
 
-use Core\admin\models\Request;
-use Core\admin\models\View;
+use Core\system\models\Request;
+use Core\system\models\View;
 
 class CoreModController extends Controller
 {

@@ -20,7 +20,7 @@ spl_autoload_register(function (string $className) {
     include($dir . '/' . $filePath);
 });
 
-require_once(ENGINE_DIR . '/modules/twelvee/core_mod/admin/bootstrap/bootstrap.php');
+require_once(ENGINE_DIR . '/modules/twelvee/core_mod/system/bootstrap/bootstrap.php');
 $request = Core\create_application();
 $router = Core\boot_routes();
 Core\resolve_request($router, $request);;
