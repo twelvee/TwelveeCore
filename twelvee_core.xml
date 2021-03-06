@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dleplugin>
+	<name>Twelvee Core</name>
+	<description>Облачное API для работы с Datalife Engine. Магазин плагинов, шаблонов, хаков и модулей.</description>
+	<icon></icon>
+	<version>1.0</version>
+	<dleversion>14.0</dleversion>
+	<versioncompare>greater</versioncompare>
+	<mysqlinstall><![CDATA[INSERT INTO `{prefix}_admin_sections` (`name`, `title`, `descr`, `icon`, `allow_groups`) VALUES ('twelvee_core', 'Twelvee Core', 'Облачное API для работы с Datalife Engine.', '', '1')]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
+	<mysqlenable><![CDATA[]]></mysqlenable>
+	<mysqldisable><![CDATA[]]></mysqldisable>
+	<mysqldelete><![CDATA[DELETE FROM `{prefix}_admin_sections` WHERE name='twelvee_core']]></mysqldelete>
+</dleplugin>
