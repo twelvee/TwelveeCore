@@ -50,4 +50,19 @@ class View
         }
         return 'File not found';
     }
+
+    public function getViewContentArray(string $viewPath, array $items) {
+        if(file_exists($viewPath)) {
+            $globalContent = '';
+            foreach ($items as $key => $parameter) {
+                $content = file_get_contents($viewPath);
+                foreach ($parameter as $itemKey => $itemParameter) {
+                    $content = str_replace('{' . $itemKey . '}', $itemParameter, $content);
+                }
+                $globalContent .= $content;
+            }
+            return $globalContent;
+        }
+        return 'File not found';
+    }
 }
